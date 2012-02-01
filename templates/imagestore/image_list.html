@@ -1,6 +1,5 @@
 {% extends "imagestore/base.html" %}
-{% load i18n %}
-{% load thumbnail %}
+{% load i18n thumbnail sekizai_tags %}
 
 {% block imagestore-breadcrumb %}
     {% with "li" as scope_tag %}
@@ -39,17 +38,42 @@
     <h1>
         {% include "imagestore/image-scope.html" %}
     </h1>
-    <div id="image-thumbnails">
+    <a href="{% url imagestore:index %}">Back to Albums</a>
+    <div id="image-gallery">
+        <ul class="gallery">
         {% for image in image_list %}
-            <div class='image-preview'>
+            <li>
+            {% thumbnail image.image "650x650" as full_im %}
             {% thumbnail image.image "120x120" crop="center" as im %}
-                <a class="thumb" rel='gallery-image[ilist]' href="{% include "imagestore/image-href.html" %}">
+                <a class="thumb" rel='prettyPhoto[gallery]' href="{{ full_im.url }}">
                         <img class="preview" {% if image.title %} alt="{{ image.title }}" {% endif %} src="{{ im.url }}"><br><span class='image-title'>{{ image.title }}</span></a>
             {% endthumbnail %}
-            </div>
+            {% endthumbnail %}
+            </li>
         {% endfor %}
+        </ul>
         {% include "imagestore/pagination.html" %}
-    </div>
+
+</div>
+
+
+{% addtoblock 'css' %}
+  <link  rel="stylesheet/less" type="text/css" href="/static/css/prettyPhoto.css"/>
+{% endaddtoblock %}
+
+{% addtoblock 'js' %}
+<script src="/static/js/jquery/plugins/jquery.prettyPhoto.js"></script>
+{% endaddtoblock %}
+
+
+{% addtoblock 'document_ready' %}
+    $("a[rel^='prettyPhoto']").prettyPhoto();
+{% endaddtoblock %}
 {% endblock %}
+
+
+
+
+
 
 

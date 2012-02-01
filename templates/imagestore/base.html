@@ -27,12 +27,12 @@
         {% block imagestore-info %}
         {% endblock %}
         <div id="controls">
-            <ul>
+            <ul class="nav nav-tabs">
                 {% if imagestore_perms.add_image or request.user.is_superuser %}
-                    <li><a href={% url imagestore:upload %}>{% trans "Upload image" %}</a></li>
+                    <li><a href={% url imagestore:upload %} data-toggle="tab">{% trans "Upload image" %}</a></li>
                 {% endif %}
                 {% if imagestore_perms.add_album or request.user.is_superuser %}
-                    <li><a href={% url imagestore:create-album %}>{% trans "Create new album" %}</a></li>
+                    <li><a href={% url imagestore:create-album %} data-toggle="tab">{% trans "Create new album" %}</a></li>
                 {% endif %}
                 {% block controls %}
                 {% endblock controls %}

@@ -4,8 +4,9 @@
 {% load tagging_tags %}
 
 {% block title %}
-    {% trans "Image" %} - {{ image.title }}
+    {% trans "Image" %} - {% if image.title %}{{ image.title }}{% else %}{{ image.id }}{% endif %}
 {% endblock %}
+
 
 {% block imagestore-breadcrumb %}
     {% if view_user and IMAGESTORE_SHOW_USER %}
@@ -43,9 +44,11 @@
                     {% include "imagestore/image-scope.html" %}
             </h2>
         {% endif %}
+        {% if image.description %}
         <div class="image-description">
             {{ image.description }}
         </div>
+        {% endif %}
         <div id="image-view">
             <div class="navigation">
                 {% if previous %} <a class="previous-link" href="

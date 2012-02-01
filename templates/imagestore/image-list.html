@@ -1,15 +1,28 @@
 {% load i18n %}
-{% load thumbnail %}
+{% load thumbnail sekizai-tags %}
 
-<div id="image-thumbnails">
+
+{% addtoblock 'js' %}
+<script src="/static/js/jquery/plugins/jquery.prettyPhoto.js"></script>
+{% endaddtoblock %}
+
+
+<div id="image-gallery">
+    <ul class="gallery">
     {% for image in image_list %}
         {% thumbnail image.image "120x120" crop="center" as im %}
-                <a class="thumb" rel='gallery-image[ilist]' href="{{ image.get_absolute_url }}">
+                <li><a rel="prettyPhoto[gallery]" class="thumb" href="{{ image.get_absolute_url }}">
                     <img class="preview" {% if image.title %} alt="{{ image.title }}" {% endif %} src="{{ im.url }}">
-                </a>
+                </a></li>
         {% endthumbnail %}
     {% endfor %}
     {% include "imagestore/pagination.html" %}
 </div>
 
 
+
+
+
+{% addtoblock 'document_ready' %}
+	$("a[rel^='prettyPhoto']").prettyPhoto();
+{% endaddtoblock %}
