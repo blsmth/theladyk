@@ -7,7 +7,63 @@
 
 <body>
 {% cms_toolbar %}
-    {% placeholder "main" %}
+<div class="container center">
+	<div id="the_lady_killigrew"></div>
+	<div id="info">
+		<p id="address">440 Greenfield Road - Montague, MA. - (413) 367-9666</p>
+		<p id="hours">7 days / 8am - 11pm (at least)</p>
+	</div>
+	<div id="navigation">
+		<ul id="navlist">
+
+			<li><a href="/" title="Home">Home</a></li>
+			<li><a href="/menu" title="Menu">Menu</a></li>
+			<li><a href="/directions" title="Directions">Hours &amp; Directions</a></li>
+			<li><a href="/contact" title="Contact">Contact</a></li>
+			<li><a href="/image" title="Image Gallery">Image 
+Gallery</a></li>
+		<!-- <li><a href="http://www.theladykilligrew.com/events" title="Events">Events</a></li> -->
+		</ul>
+
+		
+	</div>
+</div>
+
+<div class="container center" id="mainbody">	
+	<div id="pirate_ship"></div>
+	<div id="top_of_box"><div id="theladykilligrew"></div></div>
+	<div id="contentswrapper">
+		<div id="contents">
+		
+		{% placeholder "main" %}
+    		                   
+	
+		</div> <!-- end of contents -->
+		
+	</div> <!-- end of contentswrapper -->
+	<div id="footer" class="center">
+		<p id="footerinfo">The Lady Killigrew Cafe - 440 Greenfield Road, Montague MA - (413) 367-9666</p>
+	</div> <!-- end of footer -->	
+
+</div> <!-- end of mainbody -->
 {% render_block "js" %}
+
+<script type="text/javascript">
+$(document).ready(function() {
+	{% render_block "doc_ready" %}
+});
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
 </body>
 </html>

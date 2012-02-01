@@ -9,7 +9,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    # ('Brendan Smith', 'brendan@thronegroup.com'),
 )
 
 MANAGERS = ADMINS
@@ -17,12 +17,7 @@ MANAGERS = ADMINS
 LANGUAGES = [('en', 'en')]
 DEFAULT_LANGUAGE = 0
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(PROJECT_DIR, 'mycms.db'),
-    }
-}
+
 
 # Local time zone for this installation. Choices can be found here:
 # http://en.wikipedia.org/wiki/List_of_tz_zones_by_name
@@ -50,7 +45,6 @@ USE_L10N = True
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = os.path.join(PROJECT_DIR, 'media')
-
 STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
@@ -88,6 +82,7 @@ MIDDLEWARE_CLASSES = (
 TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.auth',
     'django.core.context_processors.i18n',
+    "django.core.context_processors.debug",
     'django.core.context_processors.request',
     'django.core.context_processors.media',
     'django.core.context_processors.static',
@@ -96,7 +91,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 )
 
 CMS_TEMPLATES = (
-    ('example.html', 'Example Template'),
+    ('base.html', 'Base Template'),
 )
 
 ROOT_URLCONF = 'urls'
@@ -124,4 +119,17 @@ INSTALLED_APPS = (
     'cms.plugins.snippet',
     'cms.plugins.googlemap',
     'sekizai',
+    'django_extensions',
+    'cmsplugin_contact',
+    'imagestore',
+    'sorl.thumbnail',
+    'tagging',
 )
+
+
+
+try:
+    from local_settings import *
+except:
+    pass 
+
