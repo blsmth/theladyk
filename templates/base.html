@@ -1,7 +1,7 @@
 {% load cms_tags sekizai_tags %}
 <!doctype html>
 <head>
-  <title>{{ request.current_page.get_title }}{% block title %}{% endblock %}</title>
+  <title>{{ request.current_page.get_title }}{% block title %}{% endblock %} - The Lady Killigrew</title>
   {% render_block "css" %}
 
   {% block head %}{% endblock %}
@@ -13,7 +13,7 @@
   <link  rel="stylesheet/less" type="text/css" href="/static/bootstrap/less/bootstrap.less"/>
   <script src="/static/less.js/dist/less-1.1.5.min.js"></script>
   {% else %}
-  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css"/>
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}bootstrap/print.min.css"/>
 
   {% endif %}
