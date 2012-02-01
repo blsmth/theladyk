@@ -1,0 +1,198 @@
+/*--------------------------------------------------------------------
+| filename: ladyk.css
+| description: Style information for theladykilligrew.com.
+| author: brendan@thronegroup.com
+|
+|---------------------------------------------------------------------
+*/
+
+/* @group general layout */
+body {background-color: #fef9d1; color: #fafafa; margin-bottom: 0px; background: url('../images/ladyk_background.png') repeat; }
+.container { width: auto; margin: 0 auto; }
+.center { width: 770px; margin: 0 auto; }
+
+
+a { text-decoration: underline; font-weight: bold; color: #ffffcc; }
+a:hover { color: #a11b24; }
+a:focus { color: #fafafa; }
+
+div#the_lady_killigrew { background: url('../images/the_lady_killigrew.jpg') no-repeat; background-position: bottom 
+left; width: 409px; height: 54px; }
+div#bracket_left { background: url('../images/bracket_left.jpg') no-repeat; width: 26px; height: 204px; position: 
+relative; }
+div#navigation { background: url('../images/navigation.png') no-repeat; 
+width: 200px; height: auto; min-height: 
+204px; position: relative; left: 500px; top: -120px; padding-left: 80px; color: #000;}
+div#top_of_box { position: relative; top: 20px; background: url('../images/top_of_box.jpg') no-repeat; width: 770px; 
+height: 37px; }
+div#pirate_ship { background: url('../images/pirate_ship.jpg') no-repeat; width: 134px; height: 79px; position: 
+relative; top: 20px; left: 60px; z-index: 1;}
+
+
+div#contentswrapper { background: url('../images/box_background.jpg') repeat-y; width: 770px; z-index: 1; height: 
+auto; 
+min-height: 400px; padding-top: 0px; padding-bottom: 0px;  margin-right: 40px;}
+div#contents { background: url('../images/box_logo.jpg') no-repeat; background-position: bottom center; width: 
+710px; height: auto; min-height: 400px; margin-left: 20px; padding-top: 20px; margin-bottom: 0px; padding-bottom: 150px; padding-left: 20px; }
+
+
+
+div#contents div p.indent { text-indent: 35px; margin-left: 35px; }
+
+div#footer { background: url('../images/bottom_of_box.jpg') no-repeat; width: 770px; height: 50px; z-index: 0; 
+padding-top: 2px; vertical-align: top;}
+
+
+
+
+
+
+
+div#mainbody { margin-top: -180px; letter-spacing: 1.2px; color: #cccccc; font-family: "Tahoma"; font-weight: normal;}
+
+textarea {-webkit-border-radius: 5px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; -moz-border-radius: 5px; }
+input { -webkit-border-radius: 5px; -moz-border-radius: 4px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; }
+// table {-webkit-border-radius: 15px; -moz-border-radius: 5px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; }
+
+/* @end general layout */
+
+
+
+/* @group TEMP WELCOME */
+div#tempwelcome {color: #fafafa; font-size: 1.6em; font-family: "Times New Roman"; font-weight: lighter; font-style: italic; text-indent: 20px; line-height: 25px; padding-top: 40px; }
+div#tempwelcome:first-letter { font-size: 1.8em; }
+span.whereas { font-size: 2em; margin: 0; padding: 0; clear: none; }
+/* @end TEMP WELCOME */
+
+/* @group info area (address and hours) */
+#info { position: relative; left: 50px; top: 0px; width: 350px;}
+#info p { padding: 0px; margin: -2px; color: #000; font-size: 1.1em; font-weight: bold;}
+#info p#hours { font-style: italic; text-align: right; }
+
+/* @end info area */
+
+
+/* @group navigation */
+#navigation ul#navlist { position: relative; top: 50px; left: -30px; list-style: none; margin-left: 0px; margin-top: 
+20px; color: #330000; width: 217px;}
+#navigation ul li { margin: 4px 0; padding-top: 1px;  background: url('/images/bg_dotted.gif') repeat-x 0 77% !important; background-position: 0 61%; }
+
+#navigation ul#navlist li a:link, #navigation ul#navlist li a:visited { 
+font: 1.3em Georgia, serif; color: #777; letter-spacing: 1px; 
+font-style: italic; background: url('/images/ladyk_background.png') 
+repeat; color: #000; text-decoration: none;  padding: 2px; }
+
+
+#navigation ul#navlist li a:hover { text-decoration: underline; }
+/* @end navigation */
+
+/* @group footer */
+#footer p { padding: 0px; margin: 0px; margin-top: 10px; text-align: center; width: 760px; color: #666666; font-size: .9em; letter-spacing: .5px; }
+
+
+#jetblackinfo { position: relative; height: 60px; top: 40px; margin-top: 10px; padding-bottom: 0px; margin-bottom: 0px; background-color: #000; border-top: 2px solid #cccccc; padding: 5px; text-align: left;}
+#jetblackinfo p#bragging_rights { margin-top: 25px; color: #000; font-weight: bold; color: #fafafa; font-weight: normal; font-size: .9em; }
+#jetblackinfo p#footerinfo { margin-top: 5px; }
+/* @end footer /*
+
+/* @group phoogle map */
+div#map { width: 500px; height: 500px; margin: 0 auto; padding: 20px; }
+/* div#contents div#before_map { text-indent: 15px; margin-bottom: 20px; }
+div#contents div#after_map { text-indent: 15px; } */
+div#map div#markerDescription { color: #000; }
+/* @end phoogle map */
+
+
+
+/* @group headers */
+h2.title { color: #FFFFCC; font-family: "Times New Roman"; border-bottom: 1px solid #FFFFCC; font-weight: lighter; letter-spacing: .09em; padding: 0px; margin: 10px; margin-left: -10px; }
+/* @end headers */
+
+
+
+/* @group 404 Page */
+body#fourohfour div#content h1 { padding-left: 15px; color: #FFFFDD; font-family: "Times New Roman"; font-size: 2.4em; border-bottom: 1px solid #FFFFCC; margin: 10px; }
+body#fourohfour div#content p { color: #fafafa; font-size: 1.6em; font-family: "Times New Roman"; font-weight: lighter; font-style: italic; text-indent: 20px; line-height: 25px; padding-top: 10px; }
+body#fourohfour div#content p:first-letter { font-size: 1.8em; }
+
+/* @end 404 page /*
+
+
+/* @group contact page */
+div#contents div#before_form { margin-bottom: 40px; }
+div#contents div#after_form { margin-bottom: 40px; z-index: 1; }
+
+form#contact-mail-page { margin: 0 auto; margin-top: 20px; width: 470px; font-size: .9em; background: #222222; -webkit-border-radius: 10px; border: 1px solid #cccccc; -moz-border-radius: 10px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; padding-top: 5px; padding-bottom: 10px;}
+form#contact-mail-page legend { margin-top: -10px; float: right; }
+
+form#contact-mail-page label {float: left; text-align: right; padding-left: 10px; margin-right: 5px;  width: 150px;}
+form#contact-mail-page label#message { width: 100px;}
+
+form#contact-mail-page input, form#contact-mail-page textarea { background: #000; border: 1px solid #fafafa; color: #fff; padding: 2px; width: 180px; }
+form#contact-mail-page input:hover, form#contact-mail-page textarea:hover { background-color: #ffffcc; color: #000;} 
+form#contact-mail-page input:focus, form#contact-mail-page textarea:focus { background: #fff; border: 1px solid #000; color: #000;  }
+
+#edit-message-wrapper label { margin-left: -50px; }
+form#contact-mail-page textarea { clear: both; width: 300px; height: 200px; margin-left: 100px;}
+
+
+form#contact-mail-page input#submit { position: relative; left: 340px; width: 80px; }
+form#contact-mail-page input#submit:hover { background: #FFFFCC; color: #000;}
+/* @end contact page */
+
+
+
+/* @group error div */
+div#contents div.error { margin-left: 30px; width: 500px; padding: 10px;}
+/* @end error div */
+
+div#mainbody strong { color: #fafafa; }
+div#mainbody p { height: auto; clear: both; margin: 0; padding:0; display: block; } 
+
+/* @group menu */
+#menu { display: block; width: 540px; margin-left: auto; margin-right: auto;float: none;}
+
+
+/* @group events */
+table#calendar { margin: 0 auto; padding: 0px; margin-top: 20px; font-weight: normal; border: 1px solid #cccccc; text-align: center;}
+
+table#calendar tr.week td { height: 25px; border: 1px solid #cccccc; text-align: center; padding: 0px; font-size: 1em; text-decoration: underline; background-color: #333333; color: #fafafa; text-decoration: none; font-weight: normal;  }
+table#calendar tr.heading th {  text-align: center; font-size: 1.5em; background-color: #000; color: #ffffcc;}
+table#calendar tr.heading th { border-top: 1px solid #cccccc;  }
+table#calendar tr.heading th a { font-size: .5em; color: #ffffcc; }
+
+table#calendar td.today { background-color: #999999; height: 60px; padding: 0px; margin: 0px; }
+
+table#calendar tr.days td { width: 30px; height: 30px; border-right: 1px solid #cccccc; border-bottom: 1px solid #cccccc; padding: 0px; font-weight: bold; text-align: center; }
+table#calendar tr.days td a, table#calendar tr.days td a:visited { background-color: #333333; width: 30px; height: 30px; display: block; margin: 0px; padding: 0px; color: #ffffcc; text-align: center;}
+
+table#calendar tr.days td a:hover { background-color: #ffffcc; color: #000;}
+
+table#calendar tr.days td.highlight { background: #333333; padding: 0px; margin: 0px; }
+
+
+
+
+
+
+div.messages { background-color: #000; border: 1px solid #fafafa; margin-top: 5px; height: 20px; padding: 5px; }
+div.status {  margin-top: 5px; height: 20px; padding: 5px; }
+
+
+ul.tabs li a { background-color: #000; -webkit-border-radius: 5px; -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-radius: 0px; -moz-border-radius: 5px; }
+
+
+
+
+/* @group image galleries */
+ul.images { text-align: center; }
+.image-thumbnail { border: 1px solid #ffffcc; }
+.image-thumbnail:hover { border: 1px solid #951919 }
+
+
+ul.galleries li img {image_ga...ery.css?S (line 15)
+float:left;
+margin-right:4px;
+padding-right: 0px;
+position:relative;
+}

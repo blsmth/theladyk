@@ -1,0 +1,75 @@
+{% load cms_tags sekizai_tags %}
+<!doctype html>
+<head>
+  <title>{{ request.current_page.get_title }}{% block title %}{% endblock %}</title>
+  {% render_block "css" %}
+
+  {% block head %}{% endblock %}
+{% if debug %}
+  <script> localStorage.clear();
+    	less = { env: 'development' }; 
+  </script>
+
+  <link  rel="stylesheet/less" type="text/css" href="/static/bootstrap/less/bootstrap.less"/>
+  <script src="/static/less.js/dist/less-1.1.5.min.js"></script>
+  {% else %}
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}bootstrap/print.min.css"/>
+
+  {% endif %}
+
+</head>
+
+<body>
+{% cms_toolbar %}
+<div id="main-top" class="container">
+	<nav id="navigation" class="container">
+		<ul id="navlist">
+			<li><a href="/" title="Home">Home</a></li>
+			<li><a href="/menu" title="Menu">Menu</a></li>
+			<li><a href="/hours-and-directions" title="Directions">Hours &amp; Directions</a></li>
+			<li><a href="/contact" title="Contact">Contact</a></li>
+			<li><a href="/gallery" title="Image Gallery">Image 
+Gallery</a></li>
+		<!-- <li><a href="http://www.theladykilligrew.com/events" title="Events">Events</a></li> -->
+		</ul>
+	</nav>
+	<div id="the_lady_killigrew" class="container">
+	<div id="info">
+		<p id="address">440 Greenfield Road - Montague, MA. - (413) 367-9666</p>
+		<p id="hours">7 days / 8am - 11pm (at least)</p>
+	</div></div>
+	
+	
+</div>
+
+<div class="container" id="main-body">	
+	<div id="pirate_ship"></div>
+	<div id="top_of_box"></div>
+	<div id="contentswrapper">
+		<div id="contents">
+		{% block content %}{% endblock %}
+		{% placeholder "main" %}
+    	{% block content-related %}{% endblock %}	                   
+    		                  
+		</div> <!-- end of contents -->
+		
+		<div id="footer" class="center">
+			<p id="footerinfo">The Lady Killigrew Cafe - 440 Greenfield Road, Montague MA - (413) 367-9666</p>
+		</div> <!-- end of footer -->	
+	</div> <!-- end of contentswrapper -->
+	
+
+</div> <!-- end of mainbody -->
+
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+{% render_block "js" %}
+
+<script type="text/javascript">
+$(document).ready(function() {
+	{% render_block "doc_ready" %}
+});
+</script>
+</body>
+</html>
