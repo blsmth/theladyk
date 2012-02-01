@@ -10,6 +10,7 @@ django-fancy-autocomplete==0.1a1
 django-mptt==0.5.2
 django-sekizai==0.5
 django-tagging==0.3.1
+gunicorn==0.13.4
 html5lib==0.90
 imagestore==2.7.0
 psycopg2==2.4.4
