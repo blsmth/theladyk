@@ -1,0 +1,214 @@
+/*--------------------------------------------------------------------
+| filename: ladyk.css
+| description: Style information for theladykilligrew.com.
+| author: brendan@thronegroup.com
+|
+|---------------------------------------------------------------------
+*/
+
+// Border Radius
+.multiple-border-radius(@top-left: 5px, @top-right: 5px, @bottom-right: 5px, @bottom-left: 5px) {
+  -webkit-border-radius: @top-left @top-right @bottom-right @bottom-left;
+     -moz-border-radius: @top-left @top-right @bottom-right @bottom-left;
+          border-radius: @top-left @top-right @bottom-right @bottom-left;
+}
+
+
+
+/* @group general layout */
+body {background-color: #fef9d1; color: #fafafa; margin-bottom: 0px; background: url('/static/theme/ladyk/images/ladyk_background.png') repeat; }
+.center { width: 770px; margin: 0 auto; }
+
+
+a { text-decoration: underline; font-weight: bold; color: #ffffcc; }
+a:hover { color: #a11b24; }
+a:focus { color: #fafafa; }
+
+div#main-top { position: relative; }
+
+div#the_lady_killigrew { 
+    background: url('/static/theme/ladyk/images/the_lady_killigrew.jpg') no-repeat; 
+    background-position: top left; 
+    width: 500px; 
+    height: 54px; 
+    position: absolute; 
+    right: 0px; 
+    padding-top: 50px;
+    margin-bottom: 20px;
+    #info { 
+        p { 
+            padding: 0px; 
+            margin: -2px; 
+            color: #000; 
+            font-size: 1.1em; 
+            font-weight: bold;
+            &#hours { 
+                font-style: italic; 
+                text-align: right; 
+            }
+        }
+    }
+}
+
+
+div#main-body { margin-top: 20px;}
+
+
+
+div#pirate_ship { background: url('/static/theme/ladyk/images/pirate_ship.jpg') no-repeat; width: 134px; height: 79px;  left: 60px; z-index: 1;}
+
+
+div#contentswrapper { 
+    background-color: @black;
+    .multiple-border-radius(35px,0px,35px,35px);
+    @shadow: 10px 10px 10px 10px rgba(0,0,0,.25);
+    .box-shadow(@shadow);
+    margin-bottom: 100px;
+}
+div#contents { background: url('/static/theme/ladyk/images/box_logo.jpg') no-repeat; background-position: bottom center; height: auto; min-height: 400px; margin-left: 20px; padding-top: 20px; margin-bottom: 0px; padding-bottom: 150px; padding-left: 20px; }
+
+
+
+div#contents div p.indent { text-indent: 35px; margin-left: 35px; }
+
+div#footer { font-size: 1.4em; padding-bottom: 10px;  }
+
+
+
+
+
+
+
+textarea {-webkit-border-radius: 5px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; -moz-border-radius: 5px; }
+input { -webkit-border-radius: 5px; -moz-border-radius: 4px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; }
+// table {-webkit-border-radius: 15px; -moz-border-radius: 5px; -moz-border-radius-topright: 0px; -webkit-border-top-right-radius: 0px; }
+
+/* @end general layout */
+
+
+
+
+
+/* @group navigation */
+#navigation {
+    margin-bottom: 20px;
+  ul#navlist { 
+      margin-top: 10px;
+      list-style: none; 
+      color: #330000; 
+      li { 
+            display: inline;
+            margin-left: 10px;
+            float: left; 
+            a:link, a:visited { 
+                font: 1.3em Georgia, serif; color: #777; 
+                letter-spacing: 1px; 
+                font-style: italic;
+                color: #000; 
+                text-decoration: none;  
+                padding: 2px; 
+            } 
+            a:hover { text-decoration: underline; }
+        }
+    }
+}
+   
+
+/* @group footer */
+#footer p { padding: 0px; margin: 0px; margin-top: 10px; text-align: center; width: 760px; color: #666666; font-size: .9em; letter-spacing: .5px; }
+
+
+span.align-center {
+    width: 100%;
+    text-align: center;   
+}
+
+
+.google-map-container { 
+    width: 80%; 
+    margin: 0 auto; 
+    color: @black; }
+
+
+#contact-form {
+    margin: 0 auto;
+    margin-top: 40px;
+    width: 650px;  
+    legend {
+       color: @offWhite; 
+       font-weight: bold;
+      font-size: @baseFontSize + 12;
+
+    } 
+    label { 
+        font-size: @baseFontSize + 4;
+
+    }
+    textarea { height: 140px;
+        width: 400px;    
+    }
+    input.submit { float: right; 
+        margin-right: 80px; }
+}
+
+
+/* @group headers */
+h2.title { color: #FFFFCC; font-family: "Times New Roman"; border-bottom: 1px solid #FFFFCC; font-weight: lighter; letter-spacing: .09em; padding: 0px; margin: 10px; margin-left: -10px; }
+/* @end headers */
+
+
+
+/* @group 404 Page */
+body#fourohfour div#content h1 { padding-left: 15px; color: #FFFFDD; font-family: "Times New Roman"; font-size: 2.4em; border-bottom: 1px solid #FFFFCC; margin: 10px; }
+body#fourohfour div#content p { color: #fafafa; font-size: 1.6em; font-family: "Times New Roman"; font-weight: lighter; font-style: italic; text-indent: 20px; line-height: 25px; padding-top: 10px; }
+body#fourohfour div#content p:first-letter { font-size: 1.8em; }
+
+/* @end 404 page /*
+
+
+
+
+/* @group error div */
+div#contents div.error { margin-left: 30px; width: 500px; padding: 10px;}
+/* @end error div */
+
+/* @group menu */
+#menu { display: block; width: 540px; margin-left: auto; margin-right: auto;float: none;}
+
+
+/* @group events */
+table#calendar { margin: 0 auto; padding: 0px; margin-top: 20px; font-weight: normal; border: 1px solid #cccccc; text-align: center;}
+
+table#calendar tr.week td { height: 25px; border: 1px solid #cccccc; text-align: center; padding: 0px; font-size: 1em; text-decoration: underline; background-color: #333333; color: #fafafa; text-decoration: none; font-weight: normal;  }
+table#calendar tr.heading th {  text-align: center; font-size: 1.5em; background-color: #000; color: #ffffcc;}
+table#calendar tr.heading th { border-top: 1px solid #cccccc;  }
+table#calendar tr.heading th a { font-size: .5em; color: #ffffcc; }
+
+table#calendar td.today { background-color: #999999; height: 60px; padding: 0px; margin: 0px; }
+
+table#calendar tr.days td { width: 30px; height: 30px; border-right: 1px solid #cccccc; border-bottom: 1px solid #cccccc; padding: 0px; font-weight: bold; text-align: center; }
+table#calendar tr.days td a, table#calendar tr.days td a:visited { background-color: #333333; width: 30px; height: 30px; display: block; margin: 0px; padding: 0px; color: #ffffcc; text-align: center;}
+
+table#calendar tr.days td a:hover { background-color: #ffffcc; color: #000;}
+
+table#calendar tr.days td.highlight { background: #333333; padding: 0px; margin: 0px; }
+
+
+
+
+
+
+div.messages { background-color: #000; border: 1px solid #fafafa; margin-top: 5px; height: 20px; padding: 5px; }
+div.status {  margin-top: 5px; height: 20px; padding: 5px; }
+
+
+ul.tabs li a { background-color: #000; -webkit-border-radius: 5px; -moz-border-radius-bottomleft: 0px; -webkit-border-bottom-radius: 0px; -moz-border-radius: 5px; }
+
+
+
+
+/* @group image galleries */
+ul.images { text-align: center; }
+.image-thumbnail { border: 1px solid #ffffcc; }
+.image-thumbnail:hover { border: 1px solid #951919 }
+
