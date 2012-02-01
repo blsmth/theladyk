@@ -13,7 +13,7 @@
   <link  rel="stylesheet/less" type="text/css" href="/static/bootstrap/less/bootstrap.less"/>
   <script src="/static/less.js/dist/less-1.1.5.min.js"></script>
   {% else %}
-  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.css"/>
+  <link rel="stylesheet" href="{{ STATIC_URL }}bootstrap/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" media="print" href="{{ STATIC_URL }}bootstrap/print.min.css"/>
 
   {% endif %}
@@ -22,8 +22,8 @@
 
 <body>
 {% cms_toolbar %}
-<div id="main-top" class="container">
-	<nav id="navigation" class="container">
+<div id="navigation-wrapper" class="container">
+	<nav id="navigation" class="span12">
 		<ul id="navlist">
 			<li><a href="/" title="Home">Home</a></li>
 			<li><a href="/menu" title="Menu">Menu</a></li>
@@ -34,24 +34,25 @@ Gallery</a></li>
 		<!-- <li><a href="http://www.theladykilligrew.com/events" title="Events">Events</a></li> -->
 		</ul>
 	</nav>
-	<div id="the_lady_killigrew" class="container">
-	<div id="info">
+</div>
+<div id="info-wrapper" class="container">
+	<div id="pirate-ship-wrapper" class="span5">
+		<img id="pirate-ship" src="/static/theme/ladyk/images/pirate_ship_left.png"/>
+	</div>
+	<div id="info" class="span6">
+		<img id="the-lady-killigrew" src="/static/theme/ladyk/images/the_lady_killigrew.png"/>
 		<p id="address">440 Greenfield Road - Montague, MA. - (413) 367-9666</p>
 		<p id="hours">7 days / 8am - 11pm (at least)</p>
-	</div></div>
-	
-	
+	</div>
 </div>
+	
+	
 
 <div class="container" id="main-body">	
-	<div id="pirate_ship"></div>
-	<div id="top_of_box"></div>
-	<div id="contentswrapper">
+	<div id="contents-wrapper">
 		<div id="contents">
-		{% block content %}{% endblock %}
-		{% placeholder "main" %}
-    	{% block content-related %}{% endblock %}	                   
-    		                  
+		{% block content-related %}{% endblock %}
+		{% block content %}{% placeholder "main" %}{% endblock %}
 		</div> <!-- end of contents -->
 		
 		<div id="footer" class="center">
@@ -67,9 +68,34 @@ Gallery</a></li>
 {% render_block "js" %}
 
 <script type="text/javascript">
+
+$.fn.sail = function() {
+    $(this).attr('src',"/static/theme/ladyk/images/pirate_ship_left.png");
+    $(this).animate({
+    	'margin-left': '10', }, 
+  		10000,    // duration 
+  		function() {
+  		$(this).attr('src',"/static/theme/ladyk/images/pirate_ship_right.png");
+  		$(this).animate({  
+    		'margin-left': '280',}, 
+    		10000, // duration  
+    		function() { //completed
+  			$(this).sail();  // restart 
+  		});
+  		
+  		
+  		 });
+};
+
+
+
 $(document).ready(function() {
-	{% render_block "doc_ready" %}
+	{% render_block "document_ready" %}
+
+$('#pirate-ship').sail();
+
 });
+
 </script>
 </body>
 </html>
