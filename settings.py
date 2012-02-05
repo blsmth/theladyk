@@ -94,6 +94,7 @@ TEMPLATE_CONTEXT_PROCESSORS = (
 
 CMS_TEMPLATES = (
     ('base.html', 'Base Template'),
+    ('menu.html', 'Menu Template'),
 )
 
 ROOT_URLCONF = 'urls'
@@ -135,4 +136,3 @@ try:
     from local_settings import *
 except:
     pass 
-
